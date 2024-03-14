@@ -1,9 +1,9 @@
 
-###  DATE: 
+###  DATE: 06.03.2024
 
-###  NAME: 
-###  ROLL NO :
-###  DEPARTMENT: 
+###  NAME: Naresh Kumar V
+###  ROLL NO : 212223040126
+###  DEPARTMENT: CSE
 
 # EXPERIMENT--04-INTERFACING IOT DEVELOPMENT BOARD AND CONFIGURE USART FOR TRANSFERRING STRINGS 
 ## Aim: To Interface iot development board for configuring the the usart and transfer strings though it 
@@ -43,11 +43,31 @@ configure in the usart 2 as asynchronous mode and set the baud rate as 115200 as
 
 ## STM 32 CUBE PROGRAM :
 
+#include "main.h"
+#include "stdio.h"
+#if defined(_ICCARM)||defined(_ARMCC_VERSION)
+#define PUTCHAR_PROTOTYPE int fputc(int ch, FILE*f)
+#elif defined (GNUC)
+
+#define PUTCHAR_PROTOTYPE int __io_putchar(int ch)
+#endif
+ while (1)
+  {
+	  printf("Naresh kumar V\n212223040126\nCSE\n");
+	  HAL_Delay(500);   
+  }
+}
+PUTCHAR_PROTOTYPE
+{
+	HAL_UART_Transmit(&huart2,(uint8_t*)&ch,1,0xFFFF);
+	return ch;
+}
 
 
 ## Output screen shots of Serial port utility   :
  
- 
+ ![Naresh Kumar V](https://github.com/NARESH-KUMAR-V/-EXPERIMENT--03-INTERFACE-IOT-BOARD-AND-CONFIGURE-USART-TO-TRANSFER-STRINGS-/assets/145842937/d166b7da-8ef5-4bde-8437-9b3ffd3118e1)
+
  
  
 ## Result :
